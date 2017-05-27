@@ -1,6 +1,7 @@
-._config.yml.un~
+*.un~
 .deploy_git/
 node_modules/
 scaffolds/
 db.json
 package.json
+public/
