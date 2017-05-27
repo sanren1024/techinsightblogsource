@@ -2,3 +2,5 @@
 .deploy_git/
 node_modules/
 scaffolds/
+db.json
+package.json
