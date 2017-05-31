@@ -1,3 +1,9 @@
+---
+title: 使用hexo+github搭建个人微博——手把手教
+tags: []
+categories: []
+date: 2017-05-31 17:17:58
+---
 
 ## 如何使用hexo+github（gitpages）搭建个人微博——手把手教
 
