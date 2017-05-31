@@ -5,7 +5,7 @@ categories: []
 date: 2017-05-28 07:41:00
 ---
 
-#### Android多进程app中Application回调方法onCreate()被执行多次分析及解决
+## Android多进程app中Application回调方法onCreate()被执行多次分析及解决
 
 >  问题描述
 
