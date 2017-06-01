@@ -74,3 +74,8 @@ Hexo可以有很多主题，在[Github](https://github.com/)首页搜索框内�
     $ npm install hexo-deployer-git --save
 
 来安装git插件。
+
+到目前基本上需要的从博客站点建立，到发布所需要的软件准备工作都就绪了。
+
+> ###### PS：yilia要显示所有文章还需要进行一个配置，下文会写到。
+
