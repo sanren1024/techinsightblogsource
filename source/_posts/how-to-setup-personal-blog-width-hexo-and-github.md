@@ -30,6 +30,47 @@ date: 2017-05-31 17:17:58
 
 这样表示Hexo安装成功了。
 到此，搭建个人微博需要的3个软件就安装完成了。
-  
-    
-    
+
+接下来就需要进行相关配置及插件安装了。
+所有的操作均在GitBash命令行中进行操作。
+
+> 建站
+
+首先简历一个简单的站，创建初始化一个简单的文件夹。
+
+    $ hexo init myGitPages
+    $ cd myGitPages
+    $ npm install
+
+这样就可以新建所需要的文件。
+安装完成后，可以看到如下的几个主要文件。
+![安装结构](/images/how-to-setup-personal-blog-width-hexo-and-github/hexo_site_installed_hierarchy.png)
+
+其中:
+_config.xml      可以配置网站信息。可以参考[配置](https://hexo.io/zh-cn/docs/configuration.html)
+package.json    应用程序信息。有默认配置一些组件，可以自己根据需要添加或者移除。
+scaffolds          模板文件夹。当新建文章时，Hexo会根据scaffold来建立文件。
+source              资源文件夹，存放用户资源的地方。
+themes             主题文件夹。Hexo会根据主题来生成静态页面。
+
+> 主题
+
+Hexo可以有很多主题，在[Github](https://github.com/)首页搜索框内输入"hexo theme"，可以搜索到很多主题，目前我使用的是litten的[yilia](https://github.com/litten/hexo-theme-yilia)主题。
+
+可以在进入到建立的站点文件夹下（我的是myGitPages）下，下载yilia主题
+
+    $ git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia
+
+下载完成后，打开站点个目录下（myGitPages）的_config.xml文件，修改其中的theme属性成
+
+    theme: yilia
+
+这样就可以在发布文章的手看到修改的主题，或者通过hexo server进行查看。
+
+> 发布
+
+发布文章前一定要确认已经安装了hexo-deployer-git插件，否则无法正常发文章到git上的。
+
+    $ npm install hexo-deployer-git --save
+
+来安装git插件。
