@@ -117,8 +117,55 @@ Markdown标记语言使用比较简单，可以在[这里](http://wowubuntu.com/
 
 > Hexo发布前需要配置_config.xml
 
+在使用Hexo发布博客之前，当然还需要让Hexo知道要发布到什么地方。
 
+在站点根目录下（myGitPages），找到并编辑_config.xml文件，如下部分：
 
+    # Deployment
+    ## Docs: https://hexo.io/docs/deployment.html
+    deploy:
+      type: git
+      repository: git@github.com:techinsight/techinsight.github.io.git
+      branch: master
+      message:
+
+将新建的仓库信息及分支信息配置到_config.xml，让Hexo知道部署到GitHub的那个仓库。
+
+> 发布
+
+最后，就需要发布了。可以在站点根目录下（myGitPages）下运行一下命令：
+
+    $ hexo clean #清除原有生成的相关文件
+    $ hexo generate # 重新生成静态页面
+    $ hexo deploy # 进行部署
+
+在运行部署命令时，会弹出ssh密码输入确认框，输入*username.github.io*仓库密码，点击OK即可进行顺利发布。
+
+然后就去访问你的个人站点吧。你会看到发布的文章。
+
+### <font color="red">PS: 不同的主题可能在主题中还需要进行一定的配置，这个看个人喜好使用哪个主题，我使用的是yilia主题，其在初次查看所有文章时会发现展示的不是文章列表。那么按照主题作者提示进行配置后，重新部署就可以了。</font>
+
+1. nodejs版本大于6.2（最新的nodejs肯定符合）。
+2. 在博客根目录下（不是yilia根目录下）执行如下命令： npm i hexo-generator-json-content --save
+3. 在根目录_config.xmlw文件内配置： 
+
+    jsonContent: 
+        meta: false
+        pages: false 
+        posts: title: true 
+        date: true 
+        path: true 
+        text: false 
+        raw: false 
+        content: false 
+        slug: false 
+        updated: false 
+        comments: false 
+        link: false 
+        permalink: false 
+        excerpt: false 
+        categories: false 
+        tags: true
 
 
 
