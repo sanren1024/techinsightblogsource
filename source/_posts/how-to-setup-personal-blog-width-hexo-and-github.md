@@ -5,6 +5,8 @@ categories: []
 date: 2017-05-31 17:17:58
 ---
 
+文章有点儿长，不过解释很清晰，有兴趣的朋友请耐心看完，肯定能搭建成功！^_^
+
 > 先说说为什么想到搭建个人微博
 
 工作多年，没有认真整理过自己工作中的经验，遇到的问题及解决方案。因此想着认真整理下过去到现在过程中的问题。废话不多说，下来看看我是如何来搭建我的个人微博的。
@@ -113,7 +115,7 @@ Markdown标记语言使用比较简单，可以在[这里](http://wowubuntu.com/
 ![如图显示](/images/how-to-setup-personal-blog-width-hexo-and-github/create_a_new_repository_on_github.png)
 
 其中仓库名有所讲究，它必须是*username.github.io* ，这里的username有两种情况，其一是你的用户名即注册时使用的名称，其二是组织名称（此处组织名称并未尝试）。如下图可以看下位置。
-![新仓库名臣](/images/how-to-setup-personal-blog-width-hexo-and-github/new_repository_name_rule.png)
+![新仓库名](/images/how-to-setup-personal-blog-width-hexo-and-github/new_repository_name_rule.png)
 
 > Hexo发布前需要配置_config.xml
 
@@ -135,7 +137,7 @@ Markdown标记语言使用比较简单，可以在[这里](http://wowubuntu.com/
 
 最后，就需要发布了。可以在站点根目录下（myGitPages）下运行一下命令：
 
-    $ hexo clean #清除原有生成的相关文件
+    $ hexo clean # 清除原有生成的相关文件
     $ hexo generate # 重新生成静态页面
     $ hexo deploy # 进行部署
 
@@ -147,25 +149,24 @@ Markdown标记语言使用比较简单，可以在[这里](http://wowubuntu.com/
 
 1. nodejs版本大于6.2（最新的nodejs肯定符合）。
 2. 在博客根目录下（不是yilia根目录下）执行如下命令： npm i hexo-generator-json-content --save
-3. 在根目录_config.xmlw文件内配置： 
-
-    jsonContent: 
-        meta: false
-        pages: false 
-        posts: title: true 
-        date: true 
-        path: true 
-        text: false 
-        raw: false 
-        content: false 
-        slug: false 
-        updated: false 
-        comments: false 
-        link: false 
-        permalink: false 
-        excerpt: false 
-        categories: false 
-        tags: true
-
-
+3. 在根目录_config.xml文件内配置： 
+    &nbsp;&nbsp;&nbsp;&nbsp;# 查看yilia主题下所有文章配置
+    &nbsp;&nbsp;&nbsp;&nbsp;jsonContent:
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    meta: false
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    pages: false
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    posts:
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;     title: true
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;     date: true
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;     path: true
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      text: false
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      raw: false
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      content: false
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      slug: false
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      updated: false
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      comments: false
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      link: false
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      permalink: false
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     excerpt: false
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      categories: false
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      tags: true
 
