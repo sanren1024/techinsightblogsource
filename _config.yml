@@ -72,6 +72,7 @@ deploy:
   type: git
   repository: git@github.com:techinsight/techinsight.github.io.git
   branch: master
+  message: 
 
 # Admin
 admin:

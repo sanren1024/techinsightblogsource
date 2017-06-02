@@ -114,3 +114,11 @@ Markdown标记语言使用比较简单，可以在[这里](http://wowubuntu.com/
 
 其中仓库名有所讲究，它必须是*username.github.io* ，这里的username有两种情况，其一是你的用户名即注册时使用的名称，其二是组织名称（此处组织名称并未尝试）。如下图可以看下位置。
 ![新仓库名臣](/images/how-to-setup-personal-blog-width-hexo-and-github/new_repository_name_rule.png)
+
+> Hexo发布前需要配置_config.xml
+
+
+
+
+
+
