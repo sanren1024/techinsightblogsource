@@ -137,9 +137,9 @@ Markdown标记语言使用比较简单，可以在[这里](http://wowubuntu.com/
 
 最后，就需要发布了。可以在站点根目录下（myGitPages）下运行一下命令：
 
-    $ hexo clean # 清除原有生成的相关文件
-    $ hexo generate # 重新生成静态页面
-    $ hexo deploy # 进行部署
+    $ hexo clean #清除原有生成的相关文件
+    $ hexo generate #重新生成静态页面
+    $ hexo deploy #进行部署
 
 在运行部署命令时，会弹出ssh密码输入确认框，输入*username.github.io*仓库密码，点击OK即可进行顺利发布。
 
