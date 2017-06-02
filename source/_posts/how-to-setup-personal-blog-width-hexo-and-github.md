@@ -19,6 +19,8 @@ date: 2017-05-31 17:17:58
   安装Git，进入Git[下载页面](https://git-scm.com/download/)选择合适的版本进行下载。
   如果不清楚Hexo是什么？？她是一个快速，简介，高效的博客框架。更多详情可以到[Hexo官网](https://hexo.io/zh-cn/docs/index.html)读下这个文档就知道了。O(∩_∩)O哈哈~
 
+<!-- more -->
+
 安装完成Git及NodeJs后，那么就可以开始准备安装Hexo了。
 打开GitBash，使用npm命令来安装Hexo程序。
 ![git bash命令行](/images/how-to-setup-personal-blog-width-hexo-and-github/bit_bash_command_ui.png)
@@ -78,4 +80,16 @@ Hexo可以有很多主题，在[Github](https://github.com/)首页搜索框内�
 到目前基本上需要的从博客站点建立，到发布所需要的软件准备工作都就绪了。
 
 > ###### PS：yilia要显示所有文章还需要进行一个配置，下文会写到。
+
+在开始写文章发布之前可以，先查本地运行查看Hexo运行情况，运行
+
+    $ hexo server
+
+启动服务器。默认情况下，端口地址是4000。打开浏览器，访问：http://localhost:4000
+查看效果。<font color="red">若访问出错，没有打开页面，那么可能是端口被占用导致。此时可以使用</font>
+
+    $ hexo server -p 5000
+
+<font color="red">修改端口，然后重新输入端口号进行查看。</font>
+若访问成功，默认看到的是hello-wold.md（即source/_post文件夹下的默认创建文件）文件发布后的效果。
 

@@ -39,7 +39,7 @@ show_all_link: '阅读全文'
 # 数学公式
 mathjax: true 
 # 是否在新窗口打开链接
-open_in_new: false
+open_in_new: true 
 
 # 打赏
 # 请在需要打赏的文章的md文件头部，设置属性reward: true
