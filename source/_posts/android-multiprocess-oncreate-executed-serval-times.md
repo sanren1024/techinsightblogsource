@@ -31,13 +31,13 @@ manifest中组件标签*&lt;activity&gt;*， *&lt;service&gt;*， *&lt;provicer&
 
 我们可以自定义继承Application类来实现自己的Application，然后在其中的onCreate()方法中进行一定的初始化工作。
 
-若自定义了Application类，那么需要注意的就是这个类在当app中有多个进程时，每个进程启动时都会初始化一次自定义的Application。在Android中很不幸的就是我们无法为每个新创建的进程来分别创建一个Application类。
+若自定义了Application类，那么需要注意的就是这个类在当app中有多个进程时，每个进程启动时都会初始化一次Application。在Android中很不幸的就是我们无法为每个新创建的进程来分别创建一个Application类。
 ![多个进程启动的Application状态](/images/android-multiprocess-oncreate-executed-serval-times/android_multiprocesses_application.jpg)
 
 ---
 #### 解决方案
 
-> 1. getRunningAppProcesses()方法
+> 第一：getRunningAppProcesses()
 
 每个进程对应一个application，这样可以通过针对特定进程名，进行相应的初始化工作，避免资源浪费，执行时间消耗。
 
@@ -78,14 +78,43 @@ manifest中组件标签*&lt;activity&gt;*， *&lt;service&gt;*， *&lt;provicer&
 这样经过测试，在不同的进程被创建时，进行不同的工作，执行时间可以缩短一半。
 ![修改3个进程启动耗时](/images/android-multiprocess-oncreate-executed-serval-times/processes_start_timelong_after_modification.png "修改后3个进程创建耗时")
 
-***<font color="red">虽然这种方法在某个版本上可以奏效，在但Android 5.0后的版本，此方法不是每次都起到效果</font>***
+***<font color="red">虽然这种方法在某些版本上可以奏效，在但Android 5.0+版本中，由于Google开始收紧对Android底层权限管理，在趋势上方法[getRunningAppProcesses()](https://developer.android.com/reference/android/app/ActivityManager.html?hl=zh-cn#getRunningAppProcesses())将会被毙掉。因为已经在一些版本的环境中，此方法返回null。</font>***
 
-下来分析解决方法：
+> 第二：[UsageStatsManager](https://developer.android.com/reference/android/app/usage/UsageStatsManager.html)
 
+使用类UsageStatsManager来获取运行的apps列表，但是使用这个类需要添加一个权限[PACKAGE_USAGE_STATS](https://developer.android.com/reference/android/Manifest.permission.html#PACKAGE_USAGE_STATS)，而此权限是系统权限，要使用必须到Settings应用中去针对应用进行授权（我们的app用户肯定不会愿意多次一步）。另外，据称有些OEM厂商已经删除了此项设置，换言之在Settings中找不到授权入口。
+
+因此这个途径也就被毙掉了。
+
+> 最终方案
+
+经过几天google方案及针对可能的解决方法进行测试，下边的这个感觉比较靠谱。
+
+这是一个开源项目，项目地址[点击这里](https://github.com/jaredrummler/AndroidProcesses)。
+
+在我们的Application中集成并测试了该方法。
+
+源码中添加一个方法，类似于使用getRunningAppProcesses()方法一样：
 ![解决方案代码](/images/android-multiprocess-oncreate-executed-serval-times/application_oncreate_call_several_times_solution.png)
+
+以下是在三个不同的Android版本进行测试结果：
 
 ![Android 4.4.2测试结果](/images/android-multiprocess-oncreate-executed-serval-times/android_multi_processes_solution_test_on_4_4_2.png)
 
 ![Anroid 5.1.1测试结果](/images/android-multiprocess-oncreate-executed-serval-times/android_multi_processes_solution_test_on_5_1_1.png)
 
 ![Android 6.0测试结果](/images/android-multiprocess-oncreate-executed-serval-times/android_multi_processes_solution_test_on_6_0.png)
+
+可以看到，针对这三个版本是可以达到相关初始化代码只执行一次的效果。这样可以缩短启动消耗的时间。
+
+更多版本类型测试大家可以自行进行测试。
+
+<font color="red">时间原因，此方案的代码及解决方法还没有来得及跟踪，有时间在做分析......</font>
+
+这种方案也有限制：
+
+-  一些版本的系统应用不包括在内，因为他们具有更高级别的[SElinux context](http://blog.csdn.net/innost/article/details/19299937)；
+
+-  这种方法也不是[getRunningAppProcesses()](https://developer.android.com/reference/android/app/ActivityManager.html?hl=zh-cn#getRunningAppProcesses())完全的替代，因为它无法给出集成的[pkgList](https://developer.android.com/reference/android/app/ActivityManager.RunningAppProcessInfo.html#pkgList)，[lru](https://developer.android.com/reference/android/app/ActivityManager.RunningAppProcessInfo.html?hl=zh-cn#lru)和[importance](https://developer.android.com/reference/android/app/ActivityManager.RunningAppProcessInfo.html?hl=zh-cn#importance)信息；
+
+- 此库在7.0开发者预览版本上是无法起作用的。
