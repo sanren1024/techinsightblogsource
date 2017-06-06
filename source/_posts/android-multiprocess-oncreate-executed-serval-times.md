@@ -23,18 +23,21 @@ date: 2017-05-28 15:41:00
 
 如果这个属性值以冒号（“:”）开始，说明新进程相对于应用程序是一个私有进程，且组件运行在此进程中。若属性值以小写字符开始，那么新进程即是一个全局进程，组件运行在这个全局进程中。这也意味着其他应用程序组件可以与此进程进行通信，减少资源使用。
 
-标签*&lt;applicatoin&gt;*的*android:process*属性可以为整个appn内组件设置一个默认的运行进程。
+标签*&lt;applicatoin&gt;*的*android:process*属性可以为整个app内组件设置一个默认的运行进程。
 
-> Application
+manifest中组件标签*&lt;activity&gt;*， *&lt;service&gt;*， *&lt;provicer&gt;*,  *&lt;receiver&gt;*都支持配置*android:process*，即每个组件均可以创建运行在自己的一个新进程中。
 
-当在manifest中的*&lt;activity&gt;*或者*&lt;service&gt;*标签中配置了*android:process*，在创建新进程，每个进程对应了一个Dalvik虚拟机，因此新的Application实例会被创建。
+> Application类
 
-因此在我的app中启动了两个额外的service服务集成，因此Application被执行3次。
+我们可以自定义继承Application类来实现自己的Application，然后在其中的onCreate()方法中进行一定的初始化工作。
+
+若自定义了Application类，那么需要注意的就是这个类在当app中有多个进程时，每个进程启动时都会初始化一次自定义的Application。在Android中很不幸的就是我们无法为每个新创建的进程来分别创建一个Application类。
+![多个进程启动的Application状态](/images/android-multiprocess-oncreate-executed-serval-times/android_multiprocesses_application.jpg)
 
 ---
 #### 解决方案
 
-> 获取进程名
+> 1. getRunningAppProcesses()方法
 
 每个进程对应一个application，这样可以通过针对特定进程名，进行相应的初始化工作，避免资源浪费，执行时间消耗。
 
@@ -75,7 +78,14 @@ date: 2017-05-28 15:41:00
 这样经过测试，在不同的进程被创建时，进行不同的工作，执行时间可以缩短一半。
 ![修改3个进程启动耗时](/images/android-multiprocess-oncreate-executed-serval-times/processes_start_timelong_after_modification.png "修改后3个进程创建耗时")
 
-***<font color="red">虽然这种方法可以奏效，在但Android 5.0后的版本，此方法不是每次都起到效果</font>***
+***<font color="red">虽然这种方法在某个版本上可以奏效，在但Android 5.0后的版本，此方法不是每次都起到效果</font>***
 
-> 具体方案还需要测试。。。。节后更新。端午节快乐！
-> 后续继续此方案解决测试
+下来分析解决方法：
+
+![解决方案代码](/images/android-multiprocess-oncreate-executed-serval-times/application_oncreate_call_several_times_solution.png)
+
+![Android 4.4.2测试结果](/images/android-multiprocess-oncreate-executed-serval-times/android_multi_processes_solution_test_on_4_4_2.png)
+
+![Anroid 5.1.1测试结果](/images/android-multiprocess-oncreate-executed-serval-times/android_multi_processes_solution_test_on_5_1_1.png)
+
+![Android 6.0测试结果](/images/android-multiprocess-oncreate-executed-serval-times/android_multi_processes_solution_test_on_6_0.png)
