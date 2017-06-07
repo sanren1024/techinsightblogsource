@@ -1,3 +1,9 @@
+---
+title: Android获取运行进程解决方案分析
+tags: []
+categories: []
+date: 2017-06-07 17:26:10
+---
 
 在Android中获取**运行进程**这种需求在许多场合需要被使用到，但实际情况是在Android Lollipop即5.0后，Google开始收紧对底层权限控制。
 
