@@ -118,3 +118,5 @@ manifest中组件标签*&lt;activity&gt;*， *&lt;service&gt;*， *&lt;provicer&
 -  这种方法也不是[getRunningAppProcesses()](https://developer.android.com/reference/android/app/ActivityManager.html?hl=zh-cn#getRunningAppProcesses())完全的替代，因为它无法给出集成的[pkgList](https://developer.android.com/reference/android/app/ActivityManager.RunningAppProcessInfo.html#pkgList)，[lru](https://developer.android.com/reference/android/app/ActivityManager.RunningAppProcessInfo.html?hl=zh-cn#lru)和[importance](https://developer.android.com/reference/android/app/ActivityManager.RunningAppProcessInfo.html?hl=zh-cn#importance)信息；
 
 - 此库在7.0开发者预览版本上是无法起作用的。
+
+  <font color="red">下面的一篇文章就来分析下此方案是如何解决读取进程的——>《Android获取运行进程解决方案分析》</font>
