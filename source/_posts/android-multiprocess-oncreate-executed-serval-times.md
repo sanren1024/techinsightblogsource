@@ -4,7 +4,7 @@ tags: []
 categories: []
 date: 2017-05-28 15:41:00
 ---
-
+![签到](/images/temp/sign_in.jpg)
 >  问题描述
 
 最近工作中碰到一个问题，在优化app，使用DDMS查看Application log过程中看到，app启动了三个进程，一个主进程，两个附带的进程。如下图可看到一个app启动的三个进程。
