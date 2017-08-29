@@ -1,7 +1,7 @@
 ---
 title: Android获取运行进程解决方案分析
-tags: []
-categories: []
+tags: [多进程]
+categories: [Android]
 date: 2017-06-07 17:26:10
 ---
 

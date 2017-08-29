@@ -1,7 +1,7 @@
 ---
 title: 使用hexo+github搭建个人微博——手把手教
-tags: []
-categories: []
+tags: [随笔, 微博]
+categories: [随笔]
 date: 2017-05-31 17:17:58
 ---
 
