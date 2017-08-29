@@ -1,7 +1,7 @@
 ---
 title: Android多进程app中Application回调onCreate()方法被执行多次分析及解决
-tags: []
-categories: []
+tags: [Application, 多进程 ]
+categories: [Android]
 date: 2017-05-28 15:41:00
 ---
 
@@ -23,9 +23,9 @@ date: 2017-05-28 15:41:00
 
 如果这个属性值以冒号（“:”）开始，说明新进程相对于应用程序是一个私有进程，且组件运行在此进程中。若属性值以小写字符开始，那么新进程即是一个全局进程，组件运行在这个全局进程中。这也意味着其他应用程序组件可以与此进程进行通信，减少资源使用。
 
-标签*&lt;applicatoin&gt;*的*android:process*属性可以为整个app内组件设置一个默认的运行进程。
+标签*&lt;application&gt;*的*android:process*属性可以为整个app内组件设置一个默认的运行进程。
 
-manifest中组件标签*&lt;activity&gt;*， *&lt;service&gt;*， *&lt;provicer&gt;*,  *&lt;receiver&gt;*都支持配置*android:process*，即每个组件均可以创建运行在自己的一个新进程中。
+manifest中组件标签*&lt;activity&gt;*， *&lt;service&gt;*， *&lt;provider&gt;*,  *&lt;receiver&gt;*都支持配置*android:process*，即每个组件均可以创建运行在自己的一个新进程中。
 
 > Application类
 
