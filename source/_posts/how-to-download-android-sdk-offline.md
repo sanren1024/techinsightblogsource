@@ -15,6 +15,7 @@ date: 2017-10-29 22:32:13
 
 下面说的方式有点儿傻瓜式，但肯定能成功，这个方法还不能成功，那就是人品问题了。
 
+<!-- more -->
 开始吧！！！！！
 
 1. 首先下载最新的[Android Studio](https://dl.google.com/dl/android/studio/ide-zips/3.0.0.18/android-studio-ide-171.4408382-windows.zip)，因为官网提供的Android Studio内不包含SDK环境，所以同时需要下载[SKD Tools](https://dl.google.com/android/repository/sdk-tools-windows-3859397.zip)
