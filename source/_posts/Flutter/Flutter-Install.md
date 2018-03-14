@@ -21,7 +21,7 @@ FLUTTER\_STORAGE\_BASE_URL ： https://storage.flutter-io.cn
 git clone -b dev https://github.com/flutter/flutter.git Flutter
 #### <font color=red>Flutter文件夹需要注意：文件夹存放的路径上不要出现空格，否则在IDE中进行工程创建后会有警告，SDK环境路径上存在分隔符。</font>
 
-在clone完成之后，即flutter sdk下载完毕，还需要配置Flutter环境： xxxx、Flutter/bin目录下。
+在clone完成之后，即flutter sdk下载完毕，还需要配置Flutter环境： xxxx/Flutter/bin目录下。
 
 重新打开一个命令行，在其中输入命令
 
