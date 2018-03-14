@@ -1,4 +1,9 @@
-﻿#### Flutter安装——环境组准备
+﻿---
+title: Android资源获取方式
+tags: [Android，Flutter，Dart]
+categories: [Android，Flutter，Dart]
+date: 2017-08-04 16:41:51
+---
 > 安装Flutter
     
 在国内安装使用Flutter，首先阅读下这篇[文章](https://github.com/flutter/flutter/wiki/Using-Flutter-in-China)，具体原因你懂的。
