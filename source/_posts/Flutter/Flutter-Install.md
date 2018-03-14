@@ -1,5 +1,5 @@
 ﻿---
-title: Android资源获取方式
+title: Android Flutter环境准备
 tags: [Android, Flutter, Dart]
 categories: [Android, Flutter, Dart]
 date: 2018-03-15 00:32:51
