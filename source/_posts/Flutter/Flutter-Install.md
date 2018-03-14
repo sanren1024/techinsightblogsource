@@ -1,7 +1,7 @@
 ﻿---
 title: Android资源获取方式
-tags: [Android，Flutter，Dart]
-categories: [Android，Flutter，Dart]
+tags: [Android, Flutter, Dart]
+categories: [Android, Flutter, Dart]
 date: 2018-03-15 00:32:51
 ---
 > 安装Flutter
