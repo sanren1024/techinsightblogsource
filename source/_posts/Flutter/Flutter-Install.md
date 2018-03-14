@@ -1,2 +1,41 @@
-﻿Flutter安装——环境组准备
+﻿#### Flutter安装——环境组准备
+> 安装Flutter
+    
+在国内安装使用Flutter，首先阅读下这篇[文章](https://github.com/flutter/flutter/wiki/Using-Flutter-in-China)，具体原因你懂的。
+
+在国内安装Flutter需要首先需要一个值得信任的国内镜像。在镜像上边保存着Flutter索要的依赖及相关库，包等。为了使用Flutter，需要使用一个备用存储位置，我们需要配置环境变量。
+配置环境变量名：PUB\_HOSTED\_URL和FLUTTER\_STORAGE\_BASE_URL。
+
+在windows系统中，需要在环境变量设置中添加：
+PUB\_HOSTED\_URL ： https://pub.flutter-io.cn
+FLUTTER\_STORAGE\_BASE_URL ： https://storage.flutter-io.cn
+
+然后运行Git命令（前提是安装了GitBash工具）：
+git clone -b dev https://github.com/flutter/flutter.git Flutter
+#### <font color=red>Flutter文件夹需要注意：文件夹存放的路径上不要出现空格，否则在IDE中进行工程创建后会有警告，SDK环境路径上存在分隔符。</font>
+
+在clone完成之后，即flutter sdk下载完毕，还需要配置Flutter环境： xxxx、Flutter/bin目录下。
+
+重新打开一个命令行，在其中输入命令
+
+    flutter doctor
+
+进行环境及缺失的依赖检查，并下载需要的依赖。
+运行效果如下图：
+![运行flutter doctor](/images/Flutter/flutter-install/run_flutter_doctor.png)
+
+在环境及相关依赖检查完成之后，可以开始在Android  Studio中进行创建工程行为。
+
+#### <font color=red>注意：Android Studio 预览版中无法保证运行flutter成功。因此需要使用稳定版AS，且需要3.0版本以上。</font>
+Android Studio中需要安装Flutter Plugin，Dart Plugin两个插件。
+
+Dart SDK也需要手动安装，直接下载zip包免安装。
+
+成功准备好IDE环境之后，就可以创建flutter project了，最终的效果如下图：
+![flutter project结构](/images/Flutter/flutter-install/android_studio_flutter_project.png)
+
+运行效果：
+![flutter工程运行效果](/images/Flutter/flutter-installflutter_app_runtime.png)
+
+至此，Flutter，Dart环境均准备结束了。
 
