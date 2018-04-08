@@ -87,7 +87,7 @@ class MyApp extends StatelessWidget {
 
 ![Hello World](/images/Flutter/flutter-create-your-first-app/flutter_hello_world.png)
 
-#### 结果
+**结果**
 
 - 这个例子创建了一个Material app。Material是在移动端和web端上的设计标准。Flutter提供了丰富的Material组件。
 - main()方法声明了胖箭头(=>)符号表示法，这种写法表示了man()方法是一个单行函数，即函数体只有一行代码构成。
