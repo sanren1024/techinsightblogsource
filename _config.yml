@@ -4,11 +4,11 @@
 
 # Site
 title: 'TechInsight技术博客'
-subtitle: '经验之谈，欢迎指正。'
-description: 'Android, Java, 移动开发相关技术简绍。'
+subtitle: '技术之谈，欢迎指正。'
+description: 'Android, Java, 移动开发等相关技术简绍。'
 author: '倪冠华（Nicholas）'
 email: gh_ni@126.com
-language: zh-CN
+language: zh-Hans
 timezone: UTC
 
 # URL
@@ -41,7 +41,7 @@ future: true
 highlight:
   enable: true
   line_number: true
-  auto_detect: false
+  auto_detect: true
   tab_replace: true
 
 # Category & Tag
@@ -64,7 +64,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: yilia
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -101,3 +101,20 @@ jsonContent:
       excerpt: false
       categories: false
       tags: true
+
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
+  
+index_generator:
+  per_page: 5
+
+archive_generator:
+  per_page: 20
+  yearly: true
+  monthly: true
+
+tag_generator:
+  per_page: 10

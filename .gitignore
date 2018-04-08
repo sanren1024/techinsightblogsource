@@ -6,3 +6,4 @@ db.json
 package.json
 public/
 themes/landscape/
+_admin-config.yml
