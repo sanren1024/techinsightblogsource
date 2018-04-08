@@ -437,11 +437,11 @@ jiathis: true
 #add_this_id:
 
 # Share
-duoshuo_share: true
+# duoshuo_share: true
 
-duoshuo:
-  enable: true
-  shortname: techinsight
+#duoshuo:
+#  enable: true
+#  shortname: techinsight
 
 # NeedMoreShare2
 # This plugin is a pure javascript sharing lib which is useful in China.
