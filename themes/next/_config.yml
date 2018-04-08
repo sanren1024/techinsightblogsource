@@ -402,7 +402,7 @@ valine:
 
 # Support for LiveRe comments system.
 # You can get your uid from https://livere.com/insight/myCode (General web site)
-#livere_uid: your uid
+livere_uid: MTAyMC8zNTU2Ni8xMjEwMg==
 
 # Gitment
 # Introduction: https://imsun.net/posts/gitment-introduction/
@@ -497,7 +497,7 @@ google_site_verification: aI1-A1NlAUYOZdmWYdXB_z03ENoDBBbLdBIywPPOyCo
 # user_id must NOT be null when admin_enable is true!
 # you can visit http://dev.duoshuo.com get duoshuo user id.
 duoshuo_info:
-  ua_enable: true
+  ua_enable: false
   admin_enable: false
   user_id: 0
   #admin_nickname: Author
@@ -517,7 +517,7 @@ facebook_sdk:
 # This plugin depends on Facebook SDK.
 # If facebook_sdk.enable is false, Facebook comments plugin is unavailable.
 facebook_comments_plugin:
-  enable:       true
+  enable:       false
   num_of_posts: 10    # min posts num is 1
   width:        100%  # default width is 550px
   scheme:       light # default scheme is light (light or dark)
