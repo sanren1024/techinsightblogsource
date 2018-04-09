@@ -1,13 +1,33 @@
 ﻿---
-title: 关于我
+title: 关于
 date: 2018-04-09 00:21:43
 comments: false
 ---
 
-<blockquote class="blockquote-center"> 我是一名程序员。2010年毕业于重庆三峡学院。2010年11月开始Android开发工作。最早接触Android 2.1，参与了此版本的机顶盒开发项目，也在此版本中接触到JNI开发及系统级别相关的JNI配置。其后参与过Android手机平台开发工作，包括华为9200，9500平台App层缺陷修复和二次需求开发及少量framework工作，在展讯同样参与了CMCC平台开发工作。接着在Skyworth南研所从事机顶盒App开发，适配工作及其自有电视OS上App开发工作。
+> 项目经历
 
-现就职于同程网络科技股份有限公司（同程艺龙），从事Android开发工作。同时研究Kotlin，Flutter在Android上的应用。</blockquote>
+HUAWEI U9200，U9500 Android Platform App层缺陷修复及功能开发；
+CMCC Android Platform App层开发；
+Skyworth TV及机顶盒App的开发及适配；
+同程旅游攻略模块，同程旅行Android App开发。
 
+> 技术清单
 
+Android，Java，JNI，Kotlin(Junior)，Flutter(Junior), etc.
 
+> 工具
+
+Android Studio，Ubuntu，DDMS，SVN，Git，VIM，etc.
+
+> 个人技术博客
+
+[GitPages](https://techinsight.github.io/)
+[CSDN](https://blog.csdn.net/sz_chrome)
+[简书](https://www.jianshu.com/u/f4069b7c9a62)
+
+> 其他
+
+Github，StackOverflow重度用户；
+对新技术，新语言保持学习热度；
+正在研究Kotlin，Flutter的Android应用。
 
