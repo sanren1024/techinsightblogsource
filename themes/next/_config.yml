@@ -54,7 +54,7 @@ footer:
   copyright:
   # -------------------------------------------------------------
   # Hexo link (Powered by Hexo).
-  powered: true
+  powered: false
 
   theme:
     # Theme & scheme info link (Theme - NexT.scheme).
@@ -402,7 +402,7 @@ valine:
 
 # Support for LiveRe comments system.
 # You can get your uid from https://livere.com/insight/myCode (General web site)
-livere_uid: MTAyMC8zNTU2Ni8xMjEwMg==
+#livere_uid: MTAyMC8zNTU2Ni8xMjEwMg==
 
 # Gitment
 # Introduction: https://imsun.net/posts/gitment-introduction/
@@ -583,7 +583,7 @@ busuanzi_count:
 
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
-baidu_push: false
+baidu_push: true
 
 # Google Calendar
 # Share your recent schedule to others via calendar page
