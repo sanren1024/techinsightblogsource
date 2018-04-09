@@ -68,7 +68,7 @@ Dart SDK也需要手动安装，直接下载zip包免安装。
 ![flutter project结构](/images/Flutter/flutter-install/android_studio_flutter_project.png)
 
 再来看看运行效果：
-![flutter工程运行效果](/images/Flutter/flutter-installflutter_app_runtime.png)
+![flutter工程运行效果](/images/Flutter/flutter-install/flutter_app_runtime.png)
 
 至此，Flutter，Dart环境均准备结束了。
 
