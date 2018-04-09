@@ -10,6 +10,8 @@ date: 2017-10-11 02:38:26
 ---
 在最新的design提供了ToolBar来更加自由地定制，使用ActionBar，在布局文件中可以更加灵活地使用。
 
+<!-- more -->
+
 项目中实际遇上，首页三个tab页面内，ActionBar样式，功能均不同。
 ViewPager内不同的Fragment，需求的样式不同，菜单功能不同。
 

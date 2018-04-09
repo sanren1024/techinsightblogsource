@@ -12,7 +12,9 @@ date: 2017-10-11 01:14:49
 
 首先考虑的是外部容器三个页面使用Fragment实现，首个tab内部又有多个tab对应的页面，即fragment。实现考虑使用ViewPager+TabLayout方式实现。
 
-#### <font color="red">实现中问题：</font>
+<!-- more -->
+
+<font color="red" size=4>实现中问题：</font>
 > app每次打开，ViewPager首次加载显示正常，在切换之后再返回ViewPager，会发现tab页面消失。
 
 原因：ViewPager内放置Fragment使用FragmentPagerAdapter时，传入的FragmentManager对象有问题。

@@ -1,4 +1,4 @@
----
+﻿---
 title: Android资源获取方式
 tags: [随笔, 资源]
 categories: [Android]
@@ -7,6 +7,8 @@ date: 2017-08-04 16:41:51
 
 Android v4包已经更新过多个版本，在不同版本也新增加诸多新API，方便了开发人员的使用，这里要说的是针对资源获取的新API。
 新API给予了开发人员很大的方便，无须再像以前一样判断版本号，使用不同的方式去调用。
+
+<!-- more -->  
 
 > **ContextCompat**
 
@@ -19,7 +21,6 @@ Android v4包已经更新过多个版本，在不同版本也新增加诸多新A
   此方法在6.0（M）时添加，获取对应id的颜色资源。
   此方法返回的是带有系统主题风格的颜色。
 
-<!-- more -->  
 
 - static final Drawable getDrawable (Context context, int id)
    此方法在5.0添加，获取id对应的Drawable可绘制对象。

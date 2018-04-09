@@ -1,16 +1,16 @@
-﻿title: Flutter简述
+﻿---
+title: Flutter简述
 tags:
   - Flutter
   - Android
 categories:
   - Flutter
-author: 倪冠华
 date: 2018-03-23 08:36:00
 ---
 
----
 Flutter是Google移动UI框架，用以创建高质量的native接口，真正跨平台，同时在iOS和Android上运行。Flutter是免费开源的，全球开发者及组织均可以使用。
 
+<!-- more -->
 Flutter有又几个特点：
 
 1. 快速开发
@@ -22,8 +22,6 @@ Flutter有又几个特点：
 3. native性能
 
    - Flutter组件包含所有主要平台的差异，例如滚动，导航，图标和字体，从而提供了在iOS和Android一样的native性能体验.
-
-      
 
 
 > 快速开发

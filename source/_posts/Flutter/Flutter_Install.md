@@ -8,10 +8,10 @@ date: 2018-03-15 00:32:51
     
 在国内安装使用Flutter，首先阅读下这篇[文章](https://github.com/flutter/flutter/wiki/Using-Flutter-in-China)，由于国内网络大环境问题，需要提前进行一点配置。
 
+<!-- more -->  
+
 在国内安装Flutter需要首先需要一个值得信任的国内镜像。在镜像上边保存着Flutter需要的依赖及相关库，包等。为了使用Flutter，需要使用一个备用存储位置，我们需要配置环境变量。
 配置环境变量名：PUB\_HOSTED\_URL和FLUTTER\_STORAGE\_BASE_URL。
-
-<!-- more -->  
 
 在windows系统中，需要在环境变量设置中添加：
 PUB\_HOSTED\_URL ： https://pub.flutter-io.cn

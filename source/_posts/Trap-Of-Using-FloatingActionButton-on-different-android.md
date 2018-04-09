@@ -14,6 +14,8 @@ date: 2017-08-30 07:39:23
 设计类似效果：
 ![悬浮View设计](/images/Trap-Of-Using-FloatingActionButton-on-different-android/origin_design.png  "理想布局设计")
 
+<!-- more -->
+
 在实现前就考虑到design包内提供有一个FloatingActionButton组件可以来实现这个效果。
 FAB组件继承自ImageView，可以使用ImageView的所有属性。
 使用组件遇到问题：
