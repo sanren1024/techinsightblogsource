@@ -19,7 +19,7 @@ FLUTTER\_STORAGE\_BASE_URL ： https://storage.flutter-io.cn
 
 然后运行Git命令（前提是安装了GitBash工具）：
 git clone -b dev https://github.com/flutter/flutter.git Flutter
-#### <font color=red>Flutter文件夹需要注意：文件夹存放的路径上不要出现空格，否则在IDE中进行工程创建后会有警告，SDK环境路径上存在分隔符。</font>
+<font color=red size=5>Flutter文件夹需要注意：文件夹存放的路径上不要出现空格，否则在IDE中进行工程创建后会有警告，SDK环境路径上存在分隔符。</font>
 
 在clone完成之后，即flutter sdk下载完毕，还需要配置Flutter环境： xxxx/Flutter/bin目录下。
 
@@ -33,7 +33,7 @@ git clone -b dev https://github.com/flutter/flutter.git Flutter
 
 在环境及相关依赖检查完成之后，可以开始在Android  Studio中进行创建工程行为。
 
-#### <font color=red>注意：Android Studio 预览版中无法保证运行Flutter成功。因此需要使用稳定版AS，且需要3.0版本以上。</font>
+<font color=red size=5>注意：Android Studio 预览版中无法保证运行Flutter成功。因此需要使用稳定版AS，且需要3.0版本以上。</font>
 Android Studio中需要安装Flutter Plugin，Dart Plugin两个插件。
 
 Dart SDK也需要手动安装，直接下载zip包免安装。
