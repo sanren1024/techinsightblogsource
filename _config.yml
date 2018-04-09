@@ -3,10 +3,10 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 'TechInsight技术博客'
+title: '散人技术博客'
 subtitle: '技术之谈，欢迎指正。'
 description: 'Android, Java, 移动开发等相关技术简绍。'
-author: 'NN'
+author: '散人'
 email: gh_ni@126.com
 language: zh-Hans
 timezone: UTC
