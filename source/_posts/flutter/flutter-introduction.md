@@ -2,10 +2,10 @@
 title: Flutter简述
 tags:
   - Flutter
-  - Android
+  - Dart
 categories:
   - Flutter
-date: 2018-03-23 08:36:00
+date: 2018-03-12 08:36:00
 ---
 
 Flutter是Google移动UI框架，用以创建高质量的native接口，真正跨平台，同时在iOS和Android上运行。Flutter是免费开源的，全球开发者及组织均可以使用。
@@ -28,7 +28,7 @@ Flutter有又几个特点：
 
 Flutter热加载技术有助于你快速且简单地进行试验，构建UI，增加特性，并且快速修复bug。体验不到一秒的重新加载体验。
 
-![hot-reload](/images/Flutter/flutter-introdution/hot-reload.gif)
+![hot-reload](/images/flutter/flutter-introdution/hot-reload.gif)
 
 
 
@@ -36,7 +36,7 @@ Flutter热加载技术有助于你快速且简单地进行试验，构建UI，�
 
 Flutter内置MD设计风格及iOS组件，更有丰富的手势API，流畅的滚动体验和平台认同感会让用户感到愉悦。
 
-![](/images/Flutter/flutter-introdution/screenshot-1.png)![](/images/Flutter/flutter-introdution/screenshot-2.png)![](/images/Flutter/flutter-introdution/E:\Flutter_Study\screenshot-3.png)![](/images/Flutter/flutter-introdution/ios-friendlychat.png)
+![](/images/flutter/flutter-introdution/screenshot-1.png)![](/images/flutter/flutter-introdution/screenshot-2.png)![](/images/flutter/flutter-introdution/E:\Flutter_Study\screenshot-3.png)![](/images/flutter/flutter-introdution/ios-friendlychat.png)
 
 查看[组件](https://flutter.io/widgets/)
 
