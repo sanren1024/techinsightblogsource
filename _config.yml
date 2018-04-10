@@ -8,12 +8,12 @@ subtitle: '技术之谈，欢迎指正。'
 description: 'Android, Java, 移动开发等相关技术简绍。'
 author: '散人'
 email: gh_ni@126.com
-language: zh-Hans
+language: zh-CN
 timezone: UTC
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://techinsight.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -64,7 +64,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+theme: next_6_x
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
