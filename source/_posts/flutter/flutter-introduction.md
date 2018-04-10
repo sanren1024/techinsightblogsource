@@ -28,7 +28,7 @@ Flutter有又几个特点：
 
 Flutter热加载技术有助于你快速且简单地进行试验，构建UI，增加特性，并且快速修复bug。体验不到一秒的重新加载体验。
 
-![hot-reload](/images/flutter/flutter-introdution/hot-reload.gif)
+![hot-reload](/images/flutter-asset-images/flutter-introdution/hot-reload.gif)
 
 
 
@@ -36,7 +36,7 @@ Flutter热加载技术有助于你快速且简单地进行试验，构建UI，�
 
 Flutter内置MD设计风格及iOS组件，更有丰富的手势API，流畅的滚动体验和平台认同感会让用户感到愉悦。
 
-![](/images/flutter/flutter-introdution/screenshot-1.png)![](/images/flutter/flutter-introdution/screenshot-2.png)![](/images/flutter/flutter-introdution/E:\Flutter_Study\screenshot-3.png)![](/images/flutter/flutter-introdution/ios-friendlychat.png)
+![](/images/flutter-asset-images/flutter-introdution/screenshot-1.png)![](/images/flutter-asset-images/flutter-introdution/screenshot-2.png)![](/images/flutter-asset-images/flutter-introdution/E:\Flutter_Study\screenshot-3.png)![](/images/flutter-asset-images/flutter-introdution/ios-friendlychat.png)
 
 查看[组件](https://flutter.io/widgets/)
 

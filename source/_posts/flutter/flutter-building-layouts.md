@@ -17,7 +17,7 @@ date: 2018-04-11 08:19:00
 <!-- more -->
 
 这篇文章说明Flutter搭建布局。我们将学习搭建布局，做种效果如下截图：
-![](/images/flutter/flutter-building-layouts/flutter-building-layout-lakes.jpg)
+![](/images/flutter-asset-images/flutter-building-layouts/flutter-building-layout-lakes.jpg)
 
 这篇引导退一步来解释Flutter进行布局的方式，以及展示如何在屏幕上放置一个单独的组件。在学习完如何横向或竖向展示组件之后，我们会再看到些常用的布局组件。
 
@@ -69,4 +69,4 @@ date: 2018-04-11 08:19:00
    - 注意需要对齐，内边据或者边框的区域。
 
 首先，识别更大的元素。在这里，四个元素在同一列中：一个图片，两行和一个文本块。
-![](/images/flutter/flutter-building-layouts/flutter-lakes-diagram.png)
+![](/images/flutter-asset-images/flutter-building-layouts/flutter-lakes-diagram.png)

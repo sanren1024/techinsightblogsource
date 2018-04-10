@@ -29,7 +29,7 @@ git clone -b dev https://github.com/flutter/flutter.git Flutter
 
 进行环境及缺失的依赖检查，并下载需要的依赖。
 运行效果如下图：
-![运行flutter doctor](/images/flutter/flutter-install/run_flutter_doctor.png)
+![运行flutter doctor](/images/flutter-asset-images/flutter-install/run_flutter_doctor.png)
 
 在环境及相关依赖检查完成之后，可以开始在Android  Studio中进行创建工程行为。
 
@@ -65,10 +65,10 @@ Dart SDK也需要手动安装，直接下载zip包免安装。
 然后再次sync工程，进行运行。
 
 首个创建的Flutter Project工程结构如下：
-![flutter project结构](/images/flutter/flutter-install/android_studio_flutter_project.png)
+![flutter project结构](/images/flutter-asset-images/flutter-install/android_studio_flutter_project.png)
 
 再来看看运行效果：
-![flutter工程运行效果](/images/flutter/flutter-install/flutter_app_runtime.png)
+![flutter工程运行效果](/images/flutter-asset-images/flutter-install/flutter_app_runtime.png)
 
 至此，Flutter，Dart环境均准备结束了。
 
