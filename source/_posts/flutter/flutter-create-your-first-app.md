@@ -86,7 +86,7 @@ class MyApp extends StatelessWidget {
    
 2. 运行app，可以看到如下执行效果
 
-![Hello World](/images/flutter-asset-images/flutter-create-your-first-app/flutter_hello_world.png)
+![Hello World](/images/flutter/flutter-create-your-first-app/flutter_hello_world.png)
 
 **结果**
 
@@ -122,9 +122,9 @@ dependencies:
 原有模板文件中代码太多（包含注释），不全部展示出来。这里在depenencies下添加english_words包依赖。
 
 2. 在Android Studio编辑器中查看pubspec.yaml文件时，可以看到编辑器右上方有命令操作栏，
-![AS查看pubspec文件的命令操作栏](/images/flutter-asset-images/flutter-create-your-first-app/flutter_external_page_pubspec_command.png)
+![AS查看pubspec文件的命令操作栏](/images/flutter/flutter-create-your-first-app/flutter_external_page_pubspec_command.png)
 点击**Package get**。这就是获取english_words包操作。你会在控制台命令行看到：
-![获取english_words包控制台输出](/images/flutter-asset-images/flutter-create-your-first-app/flutter_third_lib_config_package_get_output.png)
+![获取english_words包控制台输出](/images/flutter/flutter-create-your-first-app/flutter_third_lib_config_package_get_output.png)
 
 3. 在lib/main.dart中，添加对english_words包的导入，如下显示的导入语句：
 
@@ -166,8 +166,8 @@ class MyApp extends StatelessWidget {
 }
 ```
 
-5. 如果App正在运行，使用热加载按钮![](/images/flutter-asset-images/flutter-create-your-first-app/hot_reload_button.png)更新app。每次点击热加载按钮，或者进行保存时，你应该都能在运行的app上看到随机选取的不同的单词对。这是因为单词对是在build()方法中产生，build()方法每次在MaterialApp需要渲染或者在Flutter Inspector中打开Platform时被执行。
-![PascalCase运行效果](/images/flutter-asset-images/flutter-create-your-first-app/flutter_english_words_pair_pascal_case.png)
+5. 如果App正在运行，使用热加载按钮![](/images/flutter/flutter-create-your-first-app/hot_reload_button.png)更新app。每次点击热加载按钮，或者进行保存时，你应该都能在运行的app上看到随机选取的不同的单词对。这是因为单词对是在build()方法中产生，build()方法每次在MaterialApp需要渲染或者在Flutter Inspector中打开Platform时被执行。
+![PascalCase运行效果](/images/flutter/flutter-create-your-first-app/flutter_english_words_pair_pascal_case.png)
 
 > <span id="3">Step 3：添加有状态组件</span>
 
@@ -407,7 +407,7 @@ class RandomWordsState extends State<RandomWords> {
 ```
 
 5. 最终重新启动App运行。
-![列表](/images/flutter-asset-images/flutter-create-your-first-app/flutter_first_app_list_view.png)![滚动列表](/images/flutter-asset-images/flutter-create-your-first-app/flutter_first_app_infinite_list_view_scrolling.gif)
+![列表](/images/flutter/flutter-create-your-first-app/flutter_first_app_list_view.png)![滚动列表](/images/flutter/flutter-create-your-first-app/flutter_first_app_infinite_list_view_scrolling.gif)
 
 ----
 
@@ -456,7 +456,7 @@ class RandomWordsState extends State<RandomWords> {
 ```
 
 4. 重启App。就将看到列表中每行右侧添加了一个心形图标。
-![添加心形图标](/images/flutter-asset-images/flutter-create-your-first-app/flutter_first_app_list_with_star_icon.png)
+![添加心形图标](/images/flutter/flutter-create-your-first-app/flutter_first_app_list_with_star_icon.png)
 
 5. 为每行添加可点击功能。即若被点击的item对应的单词对已经被收藏了，那么就会被取消收藏，反之就添加到收藏。当一个tile被点击，函数调用setState()通知framework状态发生改变。
 添加的代码如下，在_buildRow()方法中进行添加
@@ -490,7 +490,7 @@ class RandomWordsState extends State<RandomWords> {
 </td></tr></table>
 
 重运行App。你应该可以通过点击来添加或者取消收藏。注意的一点是，在点击的时候可以看到一个放射性的点击效果，这是Material风格所致。如果有Android开发经验的程序员就会知道。
-![可点击状态](/images/flutter-asset-images/flutter-create-your-first-app/flutter_first_app_list_item_with_tappable_fun.png)![收藏状态改变](/images/flutter-asset-images/flutter-create-your-first-app/flutter_first_app_infinite_list_item_tappable.gif)
+![可点击状态](/images/flutter/flutter-create-your-first-app/flutter_first_app_list_item_with_tappable_fun.png)![收藏状态改变](/images/flutter/flutter-create-your-first-app/flutter_first_app_infinite_list_item_tappable.gif)
 
 ----
 > <span id="6">Step 6：导向新的一屏</span>
@@ -755,7 +755,7 @@ class RandomWordsState extends State<RandomWords> {
 
 ```
 
-![新route展示](/images/flutter-asset-images/flutter-create-your-first-app/flutter_first_app_navigate_to_a_new_route.gif)
+![新route展示](/images/flutter/flutter-create-your-first-app/flutter_first_app_navigate_to_a_new_route.gif)
 
 ----
 
@@ -782,7 +782,7 @@ class MyApp extends StatelessWidget {
 ```
 
 2. 重运行App看看效果。需要注意的是整个的页面背景是白色的，甚至appbar也是白色的。
-![主题](/images/flutter-asset-images/flutter-create-your-first-app/flutter_first_app_use_theme_to_change_ui.png)
+![主题](/images/flutter/flutter-create-your-first-app/flutter_first_app_use_theme_to_change_ui.png)
 
 ----
 
