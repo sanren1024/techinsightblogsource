@@ -64,7 +64,13 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next_6_x
+theme: maupassant
+
+favicon:
+  small: /images/favicon-16x16.png
+  medium: /images/favicon.png
+  apple_touch_icon: /images/favicon-16x16.png
+  safari_pinned_tab: /images/logo.svg
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

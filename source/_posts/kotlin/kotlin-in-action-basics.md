@@ -1,11 +1,10 @@
-title: Kotlin基础
+﻿title: Kotlin基础
 tags:
   - Kotlin
   - Android
 categories:
   - Kotlin
 author: 散人
-date: 2018-04-13 17:38:00
 ---
 
 Kotlin是一门静态类型语言且支持类型推导，允许维护正确性与性能的同时保持源码简洁。Kotlin支持面向对象和函数式两种编码风格，通过头等函数使更高级别的抽象成为可能，通过支持不可变值简化了测试和多线程开发。
@@ -142,4 +141,74 @@ fun main(args: Array<String>) {
 
 这样的写法也是对的，其中可以看到花括号中又有一对引号。在Kotlin中可以在双引号中嵌套双引号，但需要在表达式内部（即在花括号内）。
 
+### 类和属性
+但凡了解Java的开发人员对这两个概念不会陌生。下来看看Kotlin中如何来声明类的。
+先看看Java中的声明方式。
+```java
+public class Person {
+    private final String name;
+    
+    public Person(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
+```
+这是最典型的的JavaBean类。再看看对应的Kotlin是怎么声明的。
+```kotlin
+class Person(val name: String)
+```
+使用Kotlin声明这样一个类，就只有一行。Kotlin中这种类（只有数据没有其他代码）被称为<font color=red>值对象</font>。同样也应该注意到了，Java声明中的public访问修饰符到Kotlin对应的声明中就不见了，这是因为Kotlin中public是默认的可见性。
+
+#### 属性
+
+我们知道Java中的属性是由字段及其对应的getter，setter方法组成。Kotlin中<font color=red>属性是头等的语言特性</font>，其完全地取代了字段和对应的访问器。
+
+在Kotlin中声明一个属性跟声明一个变量使用同样的关键字val和var。声明val的属性是只读的，var属性是可变的。
+```kotlin
+class Person(val name: Strinig, var isMerried: Boolean)
+```
+Kotlin中在声明一个属性的时候，同时也就声明了访问器。Kotlin中访问器的默认实现很简单，创建一个存储值得字段，以及getter和setter方法。同样可以自定义访问器，及自己的getter和setter方法。
+
+#### 自定义访问器
+先看看如何来判断一个矩形是否是正方形的程序。
+
+```kotlin
+class Rectangle(val height: Int, val width: Int) {
+    val isSquare: Boolean
+        get() {
+           return (height == width)
+        }
+}
+```
+
+#### 目录和包
+与Java一样，Kotlin源码布局同样包含了包的概念。每个Kotlin文件都以一个package语句开始，接着是import语句（Kotlin中import的可以是类，也可以是函数）。
+
+Kotlin中有一点与Java不同的是：Kotlin文件的包层级结构可以不遵循目录结构。及Kotlin文件中package语句的包声明与程序的工程目录结构可以不一致。且多个类可以放置在一个Kotlin文件中，文件名任意。
+
+但在具体实现过程中，遵循包层级结构与目录层级结构一直是比较好的实践，尤其是在程序中兼有Java和Kotlin程序文件。
+
+### 枚举和“when”
+#### 枚举
+
+Kotlin中的枚举声明需要使用两个关键字：enum class。这也是Kotlin中极少数比Java声明关键字多的地方。
+
+Kotlin中的enum是一个<font color=red>软关键字</font>。即enum只有出现在class之前才有意义，平时使用可以当做一般名称使用。
+
+枚举类不只是值得列表，可以为其声明方法。
+```kotlin
+enum class Color(val r: Int, val g: Int, val b: Int) {
+    RED(255, 0, 0), GREEN(0, 255, 0), BLUE(0, 0, 255);
+
+    fun rgb = (r * 256 + g) * 256 + b
+}
+```
+
+这里也有唯一一个Kotlin中使用分号的地方。
+
+#### when
 
