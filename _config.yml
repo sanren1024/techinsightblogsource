@@ -64,7 +64,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: maupassant
+theme: next
 
 favicon:
   small: /images/favicon-16x16.png
@@ -130,3 +130,11 @@ disqus_proxy:
   username: niguanhua
   host: disqus-proxy.ycwalker.com
   port: 443
+  
+symbols_count_time:
+  symbols: true
+  time: true
+  total_symbols: true
+  total_time: true
+  
+ 
