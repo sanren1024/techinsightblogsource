@@ -1,8 +1,14 @@
 ﻿---
 title: Flutter(三) 入门：学习更多
-tags: [Flutter, Dart]
-categories: [Flutter]
+tags: 
+ - Flutter
+ - Dart
+ 
+categories:
+- Flutter
+
 date: 2018-04-11 00:10:51
+
 ---
 
 - 学习更多有关Flutter的framework

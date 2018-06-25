@@ -2,10 +2,14 @@
 tags:
   - Flutter
   - Dart
+ 
 categories:
   - Flutter
+
 author: 散人
+
 date: 2018-04-11 08:19:00
+
 ---
 
 <table><tr><td bgcolor=#DCDCDC>
@@ -18,7 +22,7 @@ date: 2018-04-11 08:19:00
 <!-- more -->
 
 这篇文章说明Flutter搭建布局。我们将学习搭建布局，做种效果如下截图：
-![](/images/flutter/flutter-building-layouts/flutter-building-layout-lakes.jpg)
+![](https://flutter.io/tutorials/layout/images/lakes.jpg)
 
 这篇引导退一步来解释Flutter进行布局的方式，以及展示如何在屏幕上放置一个单独的组件。在学习完如何横向或竖向展示组件之后，我们会再看到些常用的布局组件。
 
@@ -30,7 +34,7 @@ date: 2018-04-11 08:19:00
   * [Step 4：实现文本区域](#6)
   * [Step 5：实现图片区域](#7)
   * [Step 6：整合](#8)
-- [Flutter布局方法](#9)
+- [Flutter布局原理](#9)
 - [布局一个组件](#10)
 - [横向及竖向布局多个组件](#11)
   * [组件对齐方式](#12)
@@ -70,13 +74,13 @@ date: 2018-04-11 08:19:00
    - 注意需要对齐，内边据或者边框的区域。
 
 首先，识别更大的元素。在这里，四个元素在同一列中：一个图片，两行和一个文本块。
-![](/images/flutter-asset-images/flutter-building-layouts/flutter-lakes-diagram.png)
+![](https://flutter.io/tutorials/layout/images/lakes-diagram.png)
 
 接下来，图解每行。第一行，我们称其Title Section，有3个子组件：一列文本区域，一个星型图标，及一个数字。第一列子组件包含2行文本。且第一列占有较大空间，因此需要将两行文本放在Expanded组件中。
-![](/images/flutter/flutter-building-layouts/flutter-title-section-diagram.png)
+![](https://flutter.io/tutorials/layout/images/title-section-diagram.png)
 
 第二行，我们称其Button section，同样有3个子组件：由三列组成，且每列均由一个图标和文本组成。
-![](/images/flutter/flutter-building-layouts/flutter-button-section-diagram.png)
+![](https://flutter.io/tutorials/layout/images/button-section-diagram.png)
 
 在图解了布局之后，再从细节到整体来实现这个布局就容易了。为了让嵌套的代码看起来不那么混乱，我们将一些实现置于变量和函数中。
 
@@ -371,4 +375,80 @@ class MyApp extends StatelessWidget {
 }
 ```
 
+### <span id="9">Flutter布局原理</span>
 
+**重点**
+- Flutter中组件（Widget）都是类（class），即有这些类来组成UI
+- 布局（layout）和UI均称为组件
+- 复杂UI由简单的组件组成
+
+Flutter中核心的概念就是组建（Widget）——包括layout和widget。例如：图片，图标，文本等这些可见的元素是组件，同样不可见的元素如行（Row），列（Column），网格（Grid）也是组件。
+
+通过组织这些简单组件来完成复杂的布局。如下图中三列，没列均有一个图标和一个文本组成。
+![](https://flutter.io/tutorials/layout/images/lakes-icons.png)  ![](https://flutter.io/tutorials/layout/images/lakes-icons-visual.png)
+
+第二张图显示了可见组件。
+
+看看图解：
+![](https://flutter.io/tutorials/layout/images/sample-flutter-layout.png)
+
+图中多数是与预期的一样，那么粉红色的Container组件是干嘛的？Container组件可以用来定制组件样式，添加内边距，外边距，边框和背景色等。
+
+这个示例中所有的文本组件均放置于Container组件中。而整个行（Row）也放置于一个Container组件中并添加了边距。
+
+### <span id="10">布局一个组件</span>
+**重点**
+- app也是组件
+- 创建组件并添加到布局
+- 要在设备上展示组件，必须将组件添加到app组件
+- Material组件库的[Scaffold](https://docs.flutter.io/flutter/material/Scaffold-class.html)使用，它提供了默认的banner，背景色，并且提供了添加drawers，snack bars和底部sheets的APIs
+- 如果愿意，可以只使用标准组件库中的组件完成app
+
+这部分内容就说说如何创建一个组件并且显示。
+只需要几步就可以在屏幕上显示一个文本，图标或者图片。
+
+1. 选择一个布局来存储这个对象。
+    基于布局样式，如边距，对齐方式等限制条件，从[layout widgets](https://flutter.io/widgets/)中选择一个布局组件。
+2. 创建一个组件来持有这个对象。
+
+看看创建实例代码
+   创建文本
+```dart
+new Text('Hello World', style: new TextStyle(ftontSize: 32.0))
+```
+
+   创建图片
+```dart
+new Image.asset('images/myimage.jpg', fit: BoxFit.cover)
+```
+
+   创建图标
+```dart
+new Icon(Icons.star, color: Colors.red[500])
+```
+3. 在布局组件中添加这个可见组件
+    布局组件分两种：单个子组件的布局组件有一个*child*属性（如Center，Container）；多个子组件的布局组件拥有*children*属性（如Row，Column等）。
+   
+   下边这段代码在Center中添加Text
+ ```dart
+ new Center(child: new Text('Hello World', style: new TextStyle(ftontSize: 32.0)))
+ ```
+
+4. 在页面上展示组件
+    Flutter app本身就是一个组件，且多数组件有一个[build()](https://docs.flutter.io/flutter/widgets/StatelessWidget/build.html)方法。在build方法中声明组件即是在设备上显示。
+对 Material风格的app来说，在*body*属性值上直接设置Center组件值即可。
+```dart
+class _MyHomePageState extends State<MyHomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return new Scaffold(
+      appBar: new AppBar(
+        title: new Text(widget.title),
+      ),
+      body: new Center(
+        child: new Text('Hello World', style: new TextStyle(fontSize: 32.0)),
+      ),
+    );
+  }
+}
+```

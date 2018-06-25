@@ -1,8 +1,14 @@
 ﻿---
 title: Flutter(一) 环境准备
-tags: [Flutter, Dart]
-categories: [Flutter]
+tags:
+ - Flutter
+ - Dart
+
+categories:
+ - Flutter
+
 date: 2018-03-15 00:32:51
+
 ---
 > 安装Flutter
     

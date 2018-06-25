@@ -1,8 +1,14 @@
 ﻿---
 title: Flutter(二)  创建第一个Flutter APP
-tags: [Flutter, Dart]
-categories: [Flutter]
+tags: 
+ - Flutter
+ - Dart
+
+categories:
+ - Flutter
+
 date: 2018-03-29 11:36:22
+
 ---
 
 这一章主要是创建一个Flutter App。如果你熟悉面向对象编程，有基本的编程概念（变量，循环，条件判断等），那么你不必要具备原有的Dart和移动开发经验，就可以轻松地理解完成这章内容。
@@ -149,20 +155,20 @@ void main() => runApp(new MyApp());
   
 class MyApp extends StatelessWidget {  
   @override  
-  Widget build(BuildContext context) {  
-    final wordPair = new WordPair.random();  
-	  return new MaterialApp(  
-	    title:'Welcome to Flutter',  
-		home:new Scaffold(  
-		        appBar:new AppBar(  
-		          title:new Text('Welcome to Flutter'),  
-		        ),  
-		body:new Center(  
-		          child:new Text(wordPair.asPascalCase),  
-		      ),  
-		),  
-	 );  
-  }  
+  Widget build(BuildContext context) {
+    final wordPair = new WordPair.random();
+	  return new MaterialApp(
+	    title:'Welcome to Flutter',
+		home:new Scaffold(
+		  appBar:new AppBar(
+		    title:new Text('Welcome to Flutter'),
+		  ),
+		body:new Center(
+		  child:new Text(wordPair.asPascalCase),
+		),
+	  ),
+	);
+  }
 }
 ```
 
@@ -787,3 +793,4 @@ class MyApp extends StatelessWidget {
 ----
 
 好了，这章的内容就是这些了。
+
