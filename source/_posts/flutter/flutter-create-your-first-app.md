@@ -67,7 +67,7 @@ date: 2018-03-29 11:36:22
 1.  替换模板的lib/main.dart
     移除原有工程中的模板代码lib/main.dart。输入如下代码，可以查看到UI中间显示的“Hello World”。
 
-```dart
+```Dart
 import 'package:flutter/material.dart';
 
 void main() => runApp(new MyApp());
@@ -75,17 +75,17 @@ void main() => runApp(new MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-	return new MaterialApp(
-	  title : 'Welcome to Flutter',
-	  home:new Scaffold(
-		appBar:new AppBar(
-		  title:new Text('Welcome to Flutter'),
-		),
-		body:new Center(
-		  child:new Text('Hello World'),
-		),
-	  ),
-	);
+    return new MaterialApp(
+          title : 'Welcome to Flutter',
+          home:new Scaffold(
+    appBar:new AppBar(
+      title:new Text('Welcome to Flutter'),
+    ),
+    body:new Center(
+      child:new Text('Hello World'),
+    ),
+      ),
+    );
   }
 }
 ```
@@ -147,27 +147,27 @@ import 'package:english_words/english_words.dart';
 
 针对原有代码做出修改
 
-```dart
-import 'package:flutter/material.dart';  
-import 'package:english_words/english_words.dart';  
-  
-void main() => runApp(new MyApp());  
-  
-class MyApp extends StatelessWidget {  
-  @override  
+```Dart
+import 'package:flutter/material.dart';
+import 'package:english_words/english_words.dart';
+
+void main() => runApp(new MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
   Widget build(BuildContext context) {
     final wordPair = new WordPair.random();
-	  return new MaterialApp(
-	    title:'Welcome to Flutter',
-		home:new Scaffold(
-		  appBar:new AppBar(
-		    title:new Text('Welcome to Flutter'),
-		  ),
-		body:new Center(
-		  child:new Text(wordPair.asPascalCase),
-		),
-	  ),
-	);
+      return new MaterialApp(
+            title:'Welcome to Flutter',
+        home:new Scaffold(
+              appBar:new AppBar(
+            title:new Text('Welcome to Flutter'),
+          ),
+    body:new Center(
+      child:new Text(wordPair.asPascalCase),
+    ),
+      ),
+    );
   }
 }
 ```
