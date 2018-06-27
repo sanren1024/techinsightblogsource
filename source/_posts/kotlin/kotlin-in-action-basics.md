@@ -1,4 +1,6 @@
-﻿title: Kotlin基础
+﻿---
+title: Kotlin基础
+
 tags:
   - Kotlin
   - Android
@@ -7,6 +9,8 @@ categories:
   - Kotlin
 
 author: 散人
+
+date: 2018-06-6 10:34:47
 
 ---
 

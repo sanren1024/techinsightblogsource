@@ -1,10 +1,16 @@
+---
 title: Kotlin——object（单例，伴生对象，内部类）
+
 tags:
   - Kotlin
+
 categories:
   - Kotlin
+
 author: 散人
+
 date: 2018-06-19 22:34:47
+
 ---
 
 在我的前一篇文章[设计模式之单例模式](https://techinsight.github.io/2018/06/20/designpattern/design-patterns-singleton/)中Kotlin实现中，有涉及到Kotlin中的伴生对象和属性委托的概念，这篇文章先来说说object（包括伴生对象）。
