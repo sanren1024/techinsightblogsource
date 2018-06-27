@@ -136,5 +136,11 @@ symbols_count_time:
   time: true
   total_symbols: true
   total_time: true
-  
+
+leancloud_counter_security:
+  enable_sync: true
+  app_id: Cyf9YXe4X9maSkAlCkY3TjLB-gzGzoHsz
+  app_key: V8HGy7Bbh8yk88maCdHAAv8D
+  username: techinsight   # Will be asked while deploying if is left blank
+  password:  # Recommmended to be left blank. Will be asked while deploying if is left blank
  
