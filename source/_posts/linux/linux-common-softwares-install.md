@@ -21,12 +21,14 @@ date: 2018-06-29 00:18:14
 > [安装shadowsocks](#3)
 > [安装Chrome浏览器](#4)
 
+<!-- more -->
+
 ----------
 
 ### <span id='1'>google拼音输入法</span>
 
 google拼音输入法需要在fcitx框架下安装 。
-<!-- more -->
+
 1\. 打开终端，执行如下命令。
 ```Shell
 sudo apt-get install fcitx fcitx-googlepinyin  
