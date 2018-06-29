@@ -1,6 +1,5 @@
 ﻿---
 title: Kotlin基础——函数定义及调用
-
 tags:
   - Kotlin
 
@@ -20,28 +19,29 @@ date: 2018-06-08 20:15:47
 我们知道的是Java中的方法定义离不开类，即所定义的方法必须在某个类中，即使一个类中只有一个单一的方法。
 
 有时会遇到这样的情况，针对两个不同对象的处理方式相差无几，这样的方法定义不想依赖于具体的示例对象，这个时候一般的做法是将对应的方法定义到一个Util方法中。
-
+<!-- more -->
 Kotlin针对这种情况，则提供了顶层函数的定义，即无需将函数定义到某一个类中，直接定义在代码文件的顶层。
 
 如下的示例代码：
+
 ```Kotlin
-package kt  
-  
-fun sayHelloWorld() {  
-    println("hello world!")  
+package kt
+
+fun sayHelloWorld() {
+    println("hello world!")
 }
 ```
 
 这就是一个最基本的顶层函数的定义。相应的，它被编译成Java就变成了
 
 ```Java
-package kt;  
+package kt;
 
-public final class TopMethodKt {  
-   public static final void sayHelloWorld() {  
-      String var0 = "hello world!";  
-      System.out.println(var0);  
-  }  
+public final class TopMethodKt {
+   public static final void sayHelloWorld() {
+      String var0 = "hello world!";
+      System.out.println(var0);
+  }
 }
 ```
 
